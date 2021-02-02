@@ -1,0 +1,23 @@
+<html><head><title>java script program</title></head>
+<body>
+    <h1>program 1</h1>
+    <label for="variable">
+        <input type="text" name="variable" value="">
+    </label>
+    <button onclick='checkTheValue()'>check the value is null or undefined </button>
+      <p>checked value: <span id="v_val"></span></p>
+    <script>
+        function checkTheValue(){
+            var a = document.getElementsByName('variable')[0].value;
+            if(a == null ){
+              document.getElementById("v_val").innerHTML = 'null';
+            }
+            else if( a == undefined){
+                document.getElementById("v_val").innerHTML = "undefined";
+            }
+            else{
+                document.getElementById("v_val").innerHTML = a;
+            }
+        }
+    </script>
+</body></html>
