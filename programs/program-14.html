@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 14 - JavaScript Program to Empty an Array</h1>
+    <p>  array : <span id="v_val1"></span></p>
+    <button onclick="emptyArray()">
+        Empty An Array
+    </button>
+    <p> new array : <span id="v_val"></span></p>
+    <script>
+         var arr = [1, 2, 3, 4, 5, 6] ;
+         document.getElementById("v_val1").innerHTML= arr ;
+         function emptyArray(){
+            arr.splice(0, arr.length)
+            document.getElementById("v_val").innerHTML= arr ;
+         }
+    </script>
+  </body>
+</html>
