@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>
+      program 18 - JavaScript Program to Format Numbers as Currency Strings
+    </h1>
+    <label for="currency">
+      enter number to present in currency INR
+      <input type="number" name="currency" />
+    </label>
+    <button onclick="removeDuplicates()">Click To format in currency</button>
+    <p>INR currency : <span id="v_val"></span></p>
+    <script>
+      function removeDuplicates() {
+        var a = parseInt(document.getElementsByName("currency")[0].value);
+        var currency = a.toLocaleString("en-IN", {
+          style: "currency",
+          currency: "INR",
+        });
+        document.getElementById("v_val").innerHTML = currency;
+      }
+    </script>
+  </body>
+</html>
