@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 9 - JavaScript Program to Remove Specific Item From an Array</h1>
+    <p> old array : <span id="v_val1"></span></p>
+    <label for="value"> enter the value you want to remove 
+        <input type="number" name="number">
+    </label>
+    <button onclick="removeValue()">
+        remove value from array 
+    </button>
+   
+    <p> new array : <span id="v_val"></span></p>
+    <script>
+       var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.getElementById("v_val1").innerHTML= arr ;
+        function  removeValue(){
+            var index = arr.indexOf(parseInt(document.getElementsByName('number')[0].value));
+            if (index > -1) {
+            arr.splice(index, 1);
+            document.getElementById("v_val").innerHTML= arr ;
+            }
+            else{
+                document.getElementById("v_val").innerHTML= "value is not in the array";
+            }
+        }
+    </script>
+  </body>
+</html>
