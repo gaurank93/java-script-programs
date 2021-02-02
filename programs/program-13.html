@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 13 - JavaScript Program to Check if An Object is An Array</h1>
+    <p>Array : <span id="v_val1"></span></p>
+    <p>Object : <span id="v_val2"></span></p>
+
+    <button onclick="checkObjectIsArray()">
+      check if both are array or not
+    </button>
+    <h2>if i am checking with the Array.isArray</h2>
+    <p>checking Array : <span id="v_val"></span></p>
+    <p>checking Object : <span id="v_val3"></span></p>
+    <h2>if i am checking with the 'typeof'</h2>
+    <p>checking Array : <span id="v_val4"></span></p>
+    <p>checking Object : <span id="v_val5"></span></p>
+    <script>
+      var arr = [1, 2, 3, 4, 5, 6];
+      var obj = { a: 10, b: 11 };
+      document.getElementById("v_val1").innerHTML = arr;
+      document.getElementById("v_val2").innerText = JSON.stringify(obj);
+      function checkObjectIsArray() {
+        document.getElementById("v_val").innerHTML = Array.isArray(arr);
+        document.getElementById("v_val3").innerHTML = Array.isArray(obj);
+
+        document.getElementById("v_val4").innerHTML = typeof arr;
+        document.getElementById("v_val5").innerHTML = typeof obj;
+      }
+    </script>
+  </body>
+</html>
