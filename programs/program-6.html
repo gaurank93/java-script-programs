@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 6-JavaScript Program to Check if a Number is Float or Integer</h1>
+    <label for="number"> Enter Number
+      <input type="number" name="number" />
+    </label>
+    <button onclick="checkTheNumber()">
+      check the Number is Float or Integer
+    </button>
+    <p>number is: <span id="v_val"></span></p>
+    <script>
+      function checkTheNumber() {
+          var a = document.getElementsByName('number')[0].value ;
+          if( a % 1 == 0){
+             document.getElementById('v_val').innerHTML = 'Number Is Integer';
+          }
+          else{
+            document.getElementById('v_val').innerHTML = 'Number Is float';
+          }
+        }
+    </script>
+  </body>
+</html>
