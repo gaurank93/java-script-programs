@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 12 - JavaScript Program to Append an Object to An Array</h1>
+    <p>  array : <span id="v_val1"></span></p>
+    <p> Object : <span id="v_val2"></span></p>
+   
+    <button onclick="appendObject()">
+        Append an Object to An Array
+    </button>
+   
+    <p> new array : <span id="v_val"></span></p>
+    <script>
+         var arr = [1, 2, 3, 4, 5, 6] ;
+         var obj = {a: 10, b: 11};
+         document.getElementById("v_val1").innerHTML= arr ;
+         document.getElementById("v_val2").innerText= JSON.stringify(obj) ;
+         function appendObject(){
+             var c = JSON.stringify(obj);
+             arr.push(c);
+             document.getElementById("v_val").innerHTML= arr ;
+         }
+    </script>
+  </body>
+</html>
