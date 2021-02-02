@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 4-JavaScript Program to Validate An Email Address</h1>
+    <label for="email"> enter your email to check:
+        <input type="email" name="email">
+    </label>
+    <button onclick="checkEmail()">check email</button>
+    <p>email check: <span id="v_val"></span></p>
+    <script>
+      function checkEmail() {
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var email = document.getElementsByName("email")[0].value ;
+
+        if(reg.test(email) == true){
+          document.getElementById("v_val").innerHTML = "email is right"
+        }
+        else{
+            document.getElementById("v_val").innerHTML = "email is worng"
+        }
+      }
+    </script>
+  </body>
+</html>

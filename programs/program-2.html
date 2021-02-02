@@ -3,32 +3,33 @@
     <title>java script program</title>
   </head>
   <body>
-    <h1>program 1-Javascript Program to Generate a Random Number Between Two Numbers</h1>
+    <h1>
+      program 2-Javascript Program to Generate a Random Number Between Two
+      Numbers
+    </h1>
     <label for="number1">
       <input type="number" name="number1" value="" />
     </label>
     <label for="number2">
-        <input type="number" name="number2" value="">
+      <input type="number" name="number2" value="" />
     </label>
-    <button onclick="randomNumber()">
-      Generate Number
-    </button>
+    <button onclick="randomNumber()">Generate Number</button>
     <p>Generated Number: <span id="v_val"></span></p>
     <script>
       function randomNumber() {
-        var a = parseInt(document.getElementsByName('number1')[0].value);
-        var b = parseInt(document.getElementsByName('number2')[0].value);
-        var m=0 , n =0;
-        if(a > b){
-            m = a ;
-            n = b;
+        var a = parseInt(document.getElementsByName("number1")[0].value);
+        var b = parseInt(document.getElementsByName("number2")[0].value);
+        var m = 0,
+          n = 0;
+        if (a > b) {
+          m = a;
+          n = b;
+        } else {
+          m = b;
+          n = a;
         }
-        else{
-            m = b;
-            n = a;
-        }
-        var c = Math.floor(Math.random() * (m - n + 1)) + n ;
-        document.getElementById('v_val').innerHTML = c;
+        var c = Math.floor(Math.random() * (m - n + 1)) + n;
+        document.getElementById("v_val").innerHTML = c;
       }
     </script>
   </body>
