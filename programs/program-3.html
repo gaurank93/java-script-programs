@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 1-JavaScript Program To Get The Current URL</h1>
+    <button onclick="randomNumber()">
+        Click Know your Current URL
+    </button>
+    <p>Current URL by- document.location: <span id="v_val"></span></p>
+    <p>Current URL by- window.protocol: <span id="v_val1"></span></p>
+    <p>Current URL by- window.hostname: <span id="v_val2"></span></p>
+    <p>Current URL by- window.pathname: <span id="v_val3"></span></p>
+    <p>Current URL by- window.hash: <span id="v_val4"></span></p>
+    <p>Current URL by- window.herf: <span id="v_val5"></span></p>
+    <script>
+      function randomNumber() {
+        document.getElementById('v_val').innerHTML = document.location.href;
+        document.getElementById('v_val1').innerHTML = window.location.protocol;
+        document.getElementById('v_val2').innerHTML = window.location.hostname;
+        document.getElementById('v_val3').innerHTML = window.location.pathname;
+        document.getElementById('v_val4').innerHTML = window.location.hash;
+        document.getElementById('v_val5').innerHTML = window.location.href;
+      }
+    </script>
+  </body>
+</html>
