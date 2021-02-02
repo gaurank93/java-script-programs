@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 16 - JavaScript Program to Remove Duplicates From Array</h1>
+    <p>array : <span id="v_val1"></span></p>
+    <button onclick="removeDuplicates()">Click To Add item to array</button>
+    <p>new array : <span id="v_val"></span></p>
+    <script>
+      var arr = [1, 2, 5, 5, 5, 6];
+      document.getElementById("v_val1").innerHTML = arr;
+      function removeDuplicates() {
+        document.getElementById("v_val").innerHTML = [...new Set(arr)];
+      }
+    </script>
+  </body>
+</html>
