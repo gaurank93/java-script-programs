@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>java script program</title>
+  </head>
+  <body>
+    <h1>program 5-JavaScript Program to Generate a Range of Numbers and Characters</h1>
+    <label for="string"> enter any string to Generate sub string
+        <input type="text" name="string">
+    </label>
+    <label for="sub_string"> enter the length of new string
+        <input type="number" name="number" >
+    </label>
+    <button onclick="sub_string()">Generate the string</button>
+    <p>sub string: <span id="v_val"></span></p>
+    <script>
+      function sub_string() {
+          var string = document.getElementsByName('string')[0].value ;
+          var length = parseInt( document.getElementsByName('number')[0].value) ;
+          var sub_s = '';
+          for(var i =0 ; i < length ; i++){
+              sub_s += string.charAt(Math.floor(Math.random()* string.length));
+          }
+          document.getElementById("v_val").innerHTML = sub_s ; 
+       }
+    </script>
+  </body>
+</html>
