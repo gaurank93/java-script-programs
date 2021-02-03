@@ -1,17 +1,51 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>java script program</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>java script programs</title>
   </head>
   <body>
-    <h1>program 3-JavaScript Program To Get The Current URL</h1>
-    <button onclick="randomNumber()">Click Know your Current URL</button>
-    <p>Current URL by- document.location: <span id="v_val"></span></p>
-    <p>Current URL by- window.protocol: <span id="v_val1"></span></p>
-    <p>Current URL by- window.hostname: <span id="v_val2"></span></p>
-    <p>Current URL by- window.pathname: <span id="v_val3"></span></p>
-    <p>Current URL by- window.hash: <span id="v_val4"></span></p>
-    <p>Current URL by- window.origin: <span id="v_val5"></span></p>
-    <p>Current URL by- window.port: <span id="v_val6"></span></p>
+    <div class="container text-center">
+      <h1>program 3-JavaScript Program To Get The Current URL</h1>
+
+      <button class="btn btn-primary mt-5" onclick="randomNumber()">
+        Click Check your Current page information
+      </button>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <p class="lead">
+            Current URL by- document.location: <br> <span id="v_val"></span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p class="lead">Current URL by- window.protocol: <br><span id="v_val1"></span></p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <p class="lead">Current URL by- window.hostname: <br><span id="v_val2"></span></p>
+        </div>
+        <div class="col-md-6">
+          <p class="lead">Current URL by- window.pathname: <br><span id="v_val3"></span></p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <p class="lead">Current URL by- window.port: <br><span id="v_val6"></span></p>
+        </div>
+        <div class="col-md-6">
+          <p class="lead">Current URL by- window.origin: <br><span id="v_val5"></span></p>
+        </div>
+      </div>
+    </div>
     <script>
       function randomNumber() {
         document.getElementById("v_val").innerHTML = document.location.href;
