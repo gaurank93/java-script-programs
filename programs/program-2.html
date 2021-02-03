@@ -1,20 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>java script program</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>java script programs</title>
   </head>
   <body>
-    <h1>
-      program 2-Javascript Program to Generate a Random Number Between Two
-      Numbers
-    </h1>
-    <label for="number1"> Enter start number
-      <input type="number" name="number1" value="" />
-    </label>
-    <label for="number2"> enter end number
-      <input type="number" name="number2" value="" />
-    </label>
-    <button onclick="randomNumber()">Generate Number</button>
-    <p>Generated Number: <span id="v_val"></span></p>
+    <div class="container">
+      <h1>
+        program 2-Javascript Program to Generate a Random Number Between Two
+        Numbers
+      </h1>
+      <label for="number1" class="control-lable">
+        Enter start number
+        <input type="number" name="number1" value="" class="form-control" />
+      </label>
+      <label for="number2" class="control-lable">
+        enter end number
+        <input type="number" name="number2" value="" class="form-control" />
+      </label>
+      <button class="btn btn-primary" onclick="randomNumber()">Generate Number</button>
+
+      <p class="lead mt-5">Generated Number: <span id="v_val"></span></p>
+    </div>
     <script>
       function randomNumber() {
         var a = parseInt(document.getElementsByName("number1")[0].value);
