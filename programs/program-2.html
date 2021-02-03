@@ -26,7 +26,9 @@
         enter end number
         <input type="number" name="number2" value="" class="form-control" />
       </label>
-      <button class="btn btn-primary" onclick="randomNumber()">Generate Number</button>
+      <button class="btn btn-primary" onclick="randomNumber()">
+        Generate Number
+      </button>
 
       <p class="lead mt-5">Generated Number: <span id="v_val"></span></p>
     </div>
@@ -44,8 +46,13 @@
           n = a;
         }
         var c = Math.floor(Math.random() * (m - n + 1)) + n;
-        document.getElementById("v_val").className = "text-success"
-        document.getElementById("v_val").innerHTML = c;
+        if (!isNaN(c)) {
+          document.getElementById("v_val").className = "text-success";
+          document.getElementById("v_val").innerHTML = c;
+        } else {
+          document.getElementById("v_val").className = "text-danger";
+          document.getElementById("v_val").innerHTML = "Please Enter Valid Input";
+        }
       }
     </script>
   </body>
