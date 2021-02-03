@@ -13,21 +13,27 @@
     <title>java script programs</title>
   </head>
   <body>
+    <div class="container">
     <h1>program 6-JavaScript Program to Check if a Number is Float or Integer</h1>
-    <label for="number"> Enter Number
-      <input type="number" name="number" />
+    <div class="mt-5">
+    <label for="number" class="control-lable"> Enter Number
+      <input type="number" name="number" class="form-control" />
     </label>
-    <button onclick="checkTheNumber()">
-      check the Number is Float or Integer
+    <button class="btn btn-primary" onclick="checkTheNumber()">
+      Click To Check
     </button>
-    <p>number is: <span id="v_val"></span></p>
+  </div>
+    <p class="lead mt-5">Result : <span id="v_val"></span></p>
+  </div>
     <script>
       function checkTheNumber() {
           var a = document.getElementsByName('number')[0].value ;
           if( a % 1 == 0){
+             document.getElementById('v_val').className = "text-success"
              document.getElementById('v_val').innerHTML = 'Number Is Integer';
           }
           else{
+            document.getElementById('v_val').className = "text-warning"
             document.getElementById('v_val').innerHTML = 'Number Is float';
           }
         }

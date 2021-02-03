@@ -13,26 +13,32 @@
     <title>java script programs</title>
   </head>
   <body>
+    <div class="container">
     <h1>program 9 - JavaScript Program to Remove Specific Item From an Array</h1>
-    <p> old array : <span id="v_val1"></span></p>
-    <label for="value"> enter the value you want to remove 
-        <input type="number" name="number">
+    
+      <div class="mt-5">
+    <p class="lead"> array values : <span id="v_val1"></span></p>
+    <label for="value" class="control-lable"> enter the value you want to remove 
+        <input type="number" name="number" class="form-control">
     </label>
-    <button onclick="removeValue()">
+    <button class="btn btn-primary" onclick="removeValue()">
         remove value from array 
     </button>
-   
-    <p> new array : <span id="v_val"></span></p>
+  </div>
+    <p class="mt-5 lead"> Result Array : <span id="v_val"></span></p>
+  </div>
     <script>
        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         document.getElementById("v_val1").innerHTML= arr ;
-        function  removeValue(){
+        function removeValue(){
             var index = arr.indexOf(parseInt(document.getElementsByName('number')[0].value));
             if (index > -1) {
             arr.splice(index, 1);
+            document.getElementById("v_val").className = "text-success"
             document.getElementById("v_val").innerHTML= arr ;
             }
             else{
+              document.getElementById("v_val").className = "text-danger"
                 document.getElementById("v_val").innerHTML= "value is not in the array";
             }
         }

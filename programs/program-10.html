@@ -13,24 +13,29 @@
     <title>java script programs</title>
   </head>
   <body>
+    <div class="container">
     <h1>program 10 - JavaScript Program to Check if An Array Contains a Specified Value</h1>
+    <div class="mt-5">
     <p> old array : <span id="v_val1"></span></p>
-    <label for="value"> enter the value 
-        <input type="number" name="number">
+    <label for="value" class="control-lable"> enter the value 
+        <input type="number" name="number" class="form-control">
     </label>
-    <button onclick="checkValue()">
+    <button class="btn btn-primary" onclick="checkValue()">
         check in array
     </button>
-   
-    <p> new array : <span id="v_val"></span></p>
+  </div>
+    <p class="mt-5 lead"> Result : <span id="v_val"></span></p>
+  </div>
     <script>
          var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] ;
          document.getElementById("v_val1").innerHTML= arr ;
          function checkValue(){
              if(arr.includes(parseInt(document.getElementsByName('number')[0].value))){
+              document.getElementById("v_val").className = "text-success"
                    document.getElementById("v_val").innerHTML = "yes its there";
              }
              else{
+              document.getElementById("v_val").className = "text-danger"
                 document.getElementById("v_val").innerHTML = "value is not there";          
              }
          }

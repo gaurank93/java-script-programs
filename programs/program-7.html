@@ -9,24 +9,33 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    /> 
+    />
     <title>java script programs</title>
   </head>
   <body>
-    <h1>program 7 - JavaScript Program to Remove All Whitespaces From a Text</h1>
-    <label for="string"> Enter Your String
-      <input type="text" name="string" />
-    </label>
-    <button onclick="removeSpaces()">
-        remove spaces 
-    </button>
-    <p>new string trim function: <span id="v_val"></span></p>
-    <p>new string : <span id="v_val1"></span></p>
+    <div class="container">
+      <h1>
+        program 7 - JavaScript Program to Remove All Whitespaces From a Text
+      </h1>
+      <div class="mt-5">
+        <label for="string" class="control-lable">
+          Enter Your String
+          <input type="text" name="string" class="form-control" />
+        </label>
+        <button class="btn btn-primary" onclick="removeSpaces()">
+          remove spaces
+        </button>
+      </div>
+      <p class="lead mt-5">Result By Trim Function: <span id="v_val"></span></p>
+      <p class="lead mt-5">Result : <span id="v_val1"></span></p>
+    </div>
     <script>
       function removeSpaces() {
-          var str = document.getElementsByName('string')[0].value
-            document.getElementById('v_val').innerHTML = str.trim();
-            document.getElementById('v_val1').innerHTML = str.replace(/ /g,'');
+        var str = document.getElementsByName("string")[0].value;
+        document.getElementById("v_val").className = "text-success";
+        document.getElementById("v_val1").className = "text-success";
+        document.getElementById("v_val").innerHTML = str.trim();
+        document.getElementById("v_val1").innerHTML = str.replace(/ /g, "");
       }
     </script>
   </body>
