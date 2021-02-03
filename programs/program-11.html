@@ -9,27 +9,32 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    /> 
+    />
     <title>java script programs</title>
   </head>
   <body>
-    <h1>program 11 - JavaScript Program to Insert Item in an Array</h1>
-    <p> old array : <span id="v_val1"></span></p>
-    <label for="value"> enter the value 
-        <input type="number" name="number">
-    </label>
-    <button onclick="addValue()">
-        check to add in array
-    </button>
-   
-    <p> new array : <span id="v_val"></span></p>
+    <div class="container">
+      <div class="mt-5">
+        <h1>program 11 - JavaScript Program to Insert Item in an Array</h1>
+        <p>old array : <span id="v_val1"></span></p>
+        <label for="value" class="control-lable">
+          enter the value
+          <input type="number" name="number" class="form-control" />
+        </label>
+        <button class="btn btn-primary" onclick="addValue()">
+          check to add in array
+        </button>
+      </div>
+      <p class="mt-5 lead">Result of Push() : <span id="v_val"></span></p>
+    </div>
     <script>
-         var arr = [1, 2, 3, 4, 5, 6] ;
-         document.getElementById("v_val1").innerHTML= arr ;
-         function addValue(){
-             arr.push(parseInt(document.getElementsByName('number')[0].value))
-                   document.getElementById("v_val").innerHTML = arr;
-         }
+      var arr = [1, 2, 3, 4, 5, 6];
+      document.getElementById("v_val1").innerHTML = arr;
+      function addValue() {
+        arr.push(parseInt(document.getElementsByName("number")[0].value));
+        document.getElementById("v_val").className = "text-success"
+        document.getElementById("v_val").innerHTML = arr;
+      }
     </script>
   </body>
 </html>

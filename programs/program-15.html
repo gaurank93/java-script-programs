@@ -13,19 +13,25 @@
     <title>java script programs</title>
   </head>
   <body>
+    <div class="container">
     <h1>program 15 - JavaScript Program to Add Element to Start of an Array</h1>
-    <p>array : <span id="v_val1"></span></p>
-    <label for="value">
+    <div class="mt-5">
+    <p class="lead">array : <span id="v_val1"></span></p>
+    <label for="value" class="control-lable">
       enter value to add
-      <input type="number" name="number" />
+      <input type="number" name="number" class="form-control"/>
     </label>
-    <button onclick="addArray()">Click To Add item to array</button>
-    <p>new array : <span id="v_val"></span></p>
+    <button class="btn btn-primary" onclick="addArray()">Click To Add item to array</button>
+  </div>
+    <p class="lead mt-5">new array : <span id="v_val"></span></p>  
+  </div>
     <script>
       var arr = [1, 2, 3, 4, 5, 6];
       document.getElementById("v_val1").innerHTML = arr;
       function addArray() {
+        if(document.getElementsByName("number")[0].value)
         arr.unshift(document.getElementsByName("number")[0].value);
+        document.getElementById("v_val").className = "text-success"
         document.getElementById("v_val").innerHTML = arr;
       }
     </script>

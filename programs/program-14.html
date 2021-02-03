@@ -13,18 +13,22 @@
     <title>java script programs</title>
   </head>
   <body>
+    <div class="container mt-5">
     <h1>program 14 - JavaScript Program to Empty an Array</h1>
-    <p>  array : <span id="v_val1"></span></p>
-    <button onclick="emptyArray()">
+    <p class="lead">  array : <span id="v_val1"></span></p>
+    <button class="btn btn-primary" onclick="emptyArray()">
         Empty An Array
     </button>
-    <p> new array : <span id="v_val"></span></p>
+
+    <p class="lead mt-5"> new array : <span id="v_val"></span></p>
+  </div>
     <script>
          var arr = [1, 2, 3, 4, 5, 6] ;
          document.getElementById("v_val1").innerHTML= arr ;
          function emptyArray(){
             arr.splice(0, arr.length)
-            document.getElementById("v_val").innerHTML= arr ;
+            document.getElementById('v_val').className = 'text-success'
+            document.getElementById("v_val").innerHTML= arr + 'array is empty' ;
          }
     </script>
   </body>
