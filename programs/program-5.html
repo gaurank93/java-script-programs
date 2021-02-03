@@ -13,16 +13,20 @@
     <title>java script programs</title>
   </head>
   <body>
+    <div class="container">
     <h1>program 5-JavaScript Program to Generate a Range of Numbers and Characters</h1>
-    <label for="string"> enter any string to Generate sub string
-        <input type="text" name="string">
+    <div class="mt-5">
+    <label for="string" class="control-lable"> enter any string to Generate sub string
+        <input type="text" name="string" class="form-control">
     </label>
     <br>
-    <label for="sub_string"> enter the length of new string
-        <input type="number" name="number" >
+    <label for="sub_string" class="control-lable"> enter the length of new string
+        <input type="number" name="number" class="form-control">
     </label>
-    <button onclick="sub_string()">Generate the string</button>
-    <p>sub string: <span id="v_val"></span></p>
+    <button class="btn btn-primary " onclick="sub_string()">Generate the string</button>
+  </div>
+    <p class="lead mt-5">sub string: <span id="v_val"></span></p>
+  </div>
     <script>
       function sub_string() {
           var string = document.getElementsByName('string')[0].value ;
@@ -31,6 +35,7 @@
           for(var i =0 ; i < length ; i++){
               sub_s += string.charAt(Math.floor(Math.random()* string.length));
           }
+          document.getElementById("v_val").className = "text-success"
           document.getElementById("v_val").innerHTML = sub_s ; 
        }
     </script>
