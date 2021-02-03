@@ -48,11 +48,14 @@
     </div>
     <script>
       function randomNumber() {
+        var a = document.getElementsByTagName('span').length 
+        for(var i=0; i < a ; i++ )
+        document.getElementsByTagName('span')[i].className += "text-success";
+        
         document.getElementById("v_val").innerHTML = document.location.href;
         document.getElementById("v_val1").innerHTML = window.location.protocol;
         document.getElementById("v_val2").innerHTML = window.location.hostname;
         document.getElementById("v_val3").innerHTML = window.location.pathname;
-        document.getElementById("v_val4").innerHTML = window.location.hash;
         document.getElementById("v_val5").innerHTML = window.location.origin;
         document.getElementById("v_val6").innerHTML = window.location.port;
       }
