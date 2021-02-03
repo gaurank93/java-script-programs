@@ -1,16 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>java script program</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>java script programs</title>
   </head>
   <body>
+    <div class="container">
     <h1>program 1-JavaScript Program To Check If A Variable Is undefined or null</h1>
-    <label for="variable">
-      <input type="text" name="variable"  />
+    <div class="mt-5">
+    <label for="variable" class="control-lable"> Enter Any Number  
+      <input type="text" name="variable"  class="form-control"/>
     </label>
-    <button onclick="checkTheValue()">
-      check the value is null or undefined
+    <button class="btn btn-primary" onclick="checkTheValue()">
+      click to check the value is null or undefined
     </button>
-    <p>checked value: <span id="v_val"></span></p>
+  </div>
+    <p class="lead mt-5">checked value: <span id="v_val"></span></p>
+  </div>
     <script>
       function checkTheValue() {
         var a = document.getElementsByName("variable")[0].value;
